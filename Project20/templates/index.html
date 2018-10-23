@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckBox</title>
+</head>
+<body>
+        <form action="/display/" method="post">
+            {% csrf_token %}
+
+        <table align="center">
+            <tr>
+                <td>
+                    <input type="radio" name="course" value="Core Python"> Core Python
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" name="course" value="Advance Python"> Advance Python
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" name="course" value="Django"> Django
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="course" value="Project"> Project
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Show">
+                </td>
+            </tr>
+        </table>
+
+            </form>
+
+        <table>
+            <tr>
+                    <td>{{ course }}</td>
+
+            </tr>
+        </table>
+</body>
+</html>

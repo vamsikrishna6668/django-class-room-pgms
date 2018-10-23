@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form action="/display/" method="post">
+            {% csrf_token %}
+            Upload a File
+            <input type="file" name="fname">
+            <br>
+            <input type="submit" value="Send">
+        </form>
+{{ fname }}
+</body>
+</html>

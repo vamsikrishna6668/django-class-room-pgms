@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form action="/saveDetails/" method="post">
+            {% csrf_token %}
+            <table align="center" border="2">
+                <tr>
+                    <td>
+                        <input type="text" name="t1" placeholder="Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" name="t2" placeholder="Contact No" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="t3">
+                            <option>Designation</option>
+                            <option>Developer</option>
+                            <option>Tester</option>
+                            <option>Manager</option>
+                            <option>Team Leader</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <Td>
+                        <input type="number" name="t4" placeholder="Salary" required>
+                    </Td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Save">
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                       <font color="#a52a2a" size="5">
+                           {{ status }}
+                       </font>
+                    </td>
+                </tr>
+                </form>
+                <tr>
+                    <td>
+                        <form action="/downDetails/" method="post">
+                            {% csrf_token %}
+                        <input type="submit" value="Download Employee Info">
+                            </form>
+                    </td>
+                </tr>
+            </table>
+
+</body>
+</html>

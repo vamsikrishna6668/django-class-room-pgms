@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <form action="/display/" method="post">
+           {% csrf_token %}
+           Select 1 Language
+           <select name="lang">
+               <option>Clang</option>
+               <option>C++</option>
+               <option>Core Python</option>
+               <option>Advance Python</option>
+               <option>Django</option>
+               <option>Project</option>
+           </select>
+           <input type="submit" value="Send">
+       </form>
+        {{ lang }}
+        <br><br>
+        <br><br>
+<form action="/displayMulti/" method="post">
+           {% csrf_token %}
+           Select Multi Language
+           <select name="langs" multiple>
+               <option>Clang</option>
+               <option>C++</option>
+               <option>Core Python</option>
+               <option>Advance Python</option>
+               <option>Django</option>
+               <option>Project</option>
+           </select>
+           <input type="submit" value="Send">
+       </form>
+        {% for x in langs %}
+            {{ x }}<br>
+        {% endfor %}
+</body>
+</html>

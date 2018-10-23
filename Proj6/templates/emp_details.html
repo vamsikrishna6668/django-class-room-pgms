@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1> Employee Details </h1>
+        <table border="2">
+            <tr>
+                <th>IDNO</th>
+                <th>NAME</th>
+                <th>SALARY</th>
+            </tr>
+            {% for x,y in emp.items %}
+            <tr>
+                <td>{{ x }}</td>
+                {% for i in y.values %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>

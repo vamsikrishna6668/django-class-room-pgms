@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/saveProduct/" method="post">
+    {% csrf_token %}
+
+        <table>
+            <tr>
+                <th> Registration</th>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Product No" name="pno" required>  </td>
+            </tr>
+
+                        <tr>
+                <td><input type="text" placeholder="Product Name" name="pname" required>  </td>
+            </tr>
+
+                        <tr>
+                <td><input type="number" placeholder="Product Price" name="pprice" required>  </td>
+            </tr>
+                        <tr>
+                <td><input type="number" placeholder="Product Quantity" name="pqty" required>  </td>
+            </tr>
+                        <tr>
+                <td><input type="submit" value="Save">  </td>
+            </tr>
+             <tr bgcolor="aqua">
+                <td>{{ response }}</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
